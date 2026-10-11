@@ -1,0 +1,21 @@
+$primary :#c29938;
+$light: #fbf5e5;
+
+@import '../node_modules/bootstrap/scss/_functions';
+@import '../node_modules/bootstrap/scss/_variables';
+
+$custom-theme-colors: (
+  "altlight": #f2ebfa,
+  "altdark": #522192
+);
+
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+@import '../node_modules/bootstrap/scss/_bootstrap';
+
+.bg-altlight {
+  background-color: map-get($custom-theme-colors, "altlight") !important;
+}
+
+.text-altdark {
+  color: map-get($custom-theme-colors, "altdark") !important;
+}
